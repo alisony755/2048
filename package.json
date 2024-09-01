@@ -1,1 +1,13 @@
+{
+  "name": "2048-game",
+  "version": "1.0.0",
+  "description": "A simple 2048 game built using HTML, CSS, and JavaScript.",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'No build required'",
+    "build": "echo 'No build required'"
+  },
+  "author": "Alison Ye",
+  "license": "MIT"
+}
 
