@@ -125,6 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return combined;
     }
 
+  // Checks if the player has won
+  function checkForWin() {
+    for (let i = 0; i < squares.length; i++) {
+        if (squares[i].innerHTML == 2048) {
+            document.removeEventListener('keydown', control); // Stop further moves
+            setTimeout(() => alert('You Win!'), 100); // Display the message
+        }
+    }
+}
+
     // Handle key presses to move tiles
     function control(e) {
         switch (e.key) {
@@ -141,7 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 moveUp();
                 break;
         }
-        generate(); // Generate a new tile after each move
+        generate(); 
+        checkForWin();
     }
 
     document.addEventListener('keydown', control);
